@@ -1,0 +1,23 @@
+<div class="container" ng-controller="ListController">
+	<div class="row page-header">
+		<h3>{{listTitle}}</h3>
+	</div>
+	<div class="row">
+		<ul class="list-group" ng-repeat="item in listItems">
+			<li class="list-group-item">
+				<span> {{item.title}}</span>
+				<button class="btn btn-default pull-right" ng-click="removeValue($index,todo)">Remove</button>
+			</li>
+		</ul>
+	</div>
+	<div class="row input-group">
+		<form class="row col-md-12 col-lg-12" name="form" ng-submit="addValue()">
+			<div class="input-group">
+				<input class="form-control" type="text" ng-model="newValue" placeholder="Add item in {{listTitle}}" name="newValue" required />
+				<span class="input-group-btn ">
+						<button class="btn btn-default col-lg-2" ng-disabled="form.$invalid">Add</button>
+				   </span>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,2 +1,2 @@
-# AngularMultiPage
-AngularMultiPage - tab bar
+# AngularToDoList
+AngularToDoList - basic app for Angular
